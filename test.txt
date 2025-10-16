@@ -1,0 +1,16 @@
+# Demo Credentials File (FOR TESTING ONLY)
+# ----------------------------------------
+# These are fake credentials used for Git push / secret scanning testing.
+
+AWS_ACCESS_KEY_ID=AKIAFAKE1234567890TEST
+AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/fakeKey1234567890example
+DB_USERNAME=test_user
+DB_PASSWORD=SuperSecret123!
+API_TOKEN=ghp_FAKE1234567890abcdef1234567890abcdef
+SSH_PRIVATE_KEY=-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAlwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAYEAvFakeKeyExample1234567890xyzabcdefghijklmnopqrsFAKE
+AAAADAQABAAABgQC2FakeKeyExample1234567890abcdefghijklmnopqrstu12345FAKE
+-----END OPENSSH PRIVATE KEY-----
+
+# End of file
