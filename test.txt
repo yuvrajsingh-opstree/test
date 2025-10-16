@@ -1,16 +1,73 @@
-# Demo Credentials File (FOR TESTING ONLY)
-# ----------------------------------------
-# These are fake credentials used for Git push / secret scanning testing.
+# Demo secrets file (FOR TESTING ONLY — ALL VALUES ARE FAKE)
+# --------------------------------------------------------
+# Purpose: realistic-looking examples to trigger secret-scanners (GitGuardian, TruffleHog, etc.)
+# WARNING: These are dummy values. Do not use anywhere outside of a test repo/branch.
 
-AWS_ACCESS_KEY_ID=AKIAFAKE1234567890TEST
-AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/fakeKey1234567890example
-DB_USERNAME=test_user
-DB_PASSWORD=SuperSecret123!
-API_TOKEN=ghp_FAKE1234567890abcdef1234567890abcdef
-SSH_PRIVATE_KEY=-----BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAlwAAAAdzc2gtcn
-NhAAAAAwEAAQAAAYEAvFakeKeyExample1234567890xyzabcdefghijklmnopqrsFAKE
-AAAADAQABAAABgQC2FakeKeyExample1234567890abcdefghijklmnopqrstu12345FAKE
------END OPENSSH PRIVATE KEY-----
+# 1) AWS
+AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE_TEST
+AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY_TEST
 
-# End of file
+# 2) GitHub / GitLab Personal Access Tokens (typical prefixes)
+GITHUB_TOKEN=ghp_16a8f9d0c0e7b2e1f9c6d9b0a1b2c3d4e5f6TEST
+GITLAB_PRIVATE_TOKEN=glpat-9a1b2c3d4e5f6g7h8i9j0kTEST
+
+# 3) Google service account JSON (compact single-line for detection)
+GOOGLE_SERVICE_ACCOUNT_JSON={"type":"service_account","project_id":"demo-project-123","private_key_id":"fakekeyid1234567890","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDfakeKeyExample\n-----END PRIVATE KEY-----\n","client_email":"demo-sa@demo-project-123.iam.gserviceaccount.com","client_id":"123456789012345678901","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/demo-sa%40demo-project-123.iam.gserviceaccount.com"}
+
+# 4) Azure storage / connection strings
+AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=demostorageacct;AccountKey=FakeAccountKeyExample1234567890==;EndpointSuffix=core.windows.net
+
+# 5) Heroku API Key
+HEROKU_API_KEY=3b1f0a4f-aaaaaaaa-bbbb-cccc-ddddeaddeaddead_TEST
+
+# 6) Stripe & PayPal (payment) keys
+STRIPE_SECRET_KEY=sk_test_51HfFakeExampleKey000000000000000000
+PAYPAL_CLIENT_ID=AbcdEFGhIjkLMnoPQRSTuvwxYZ12345fake
+PAYPAL_SECRET=Eflsdfk3r9eA_fake_secret_example_1234567890
+
+# 7) Slack webhook / bot token
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+SLACK_BOT_TOKEN=xoxb-111111111111-222222222222-XXXXXXXXXXXXXXXXXXXXXXXX_TEST
+
+# 8) Twilio
+TWILIO_ACCOUNT_SID=AC11111111111111111111111111111111
+TWILIO_AUTH_TOKEN=faKeTwilioAuthToken1234567890
+
+# 9) Database URIs (Postgres / Mongo)
+DATABASE_URL=postgres://dbuser:SuperSecretPass123!@db.example.com:5432/mydb
+MONGO_URI=mongodb+srv://mongoUser:MongoPass!@cluster0.mongodb.net/mydb?retryWrites=true&w=majority
+
+# 10) SSH private key (shortened dummy block)
+SSH_PRIVATE_KEY=-----BEGIN OPENSSH PRIVATE KEY-----\nAAAAB3NzaC1yc2EAAAADAQABAAABAQCfakeKeyExample12345\n-----END OPENSSH PRIVATE KEY-----
+
+# 11) PGP/PEM certificate (dummy)
+PEM_CERT=-----BEGIN CERTIFICATE-----\nMIIDXTCCAkWgAwIBAgIJANfakeCERT1234567890\n-----END CERTIFICATE-----
+
+# 12) Kubernetes kubeconfig token
+KUBE_TOKEN=eyJhbGciOiJSUzI1NiIsImtpZCI6IkZBS0VLRVkifQ.fake_payload.signature_TEST
+
+# 13) DockerHub / npm auth tokens
+DOCKERHUB_PASSWORD=MyD0ckerP@ssw0rdFake
+NPM_TOKEN=//registry.npmjs.org/:_authToken=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_TEST
+
+# 14) OAuth client secrets
+OAUTH_CLIENT_ID=1234567890-abcdefghijklmnopqrstuvwxyz.apps.googleusercontent.com
+OAUTH_CLIENT_SECRET=GOCSPX-FAKECLIENTSECRET1234567890EXAMPLE
+
+# 15) Generic API keys and JWTs
+API_KEY=AIzaSyD_fakeGoogleAPIKeyExample1234567890
+JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.fakepayload.TESTsignature
+
+# 16) Windows-style env / connection string
+MSSQL_CONNECTION=Server=tcp:mydb.database.windows.net,1433;Initial Catalog=mydb;Persist Security Info=False;User ID=sqladmin;Password=AdminPass123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+# 17) Example of config file snippet (YAML)
+# .circleci/config.yml
+circleci:
+  github_token: ghp_FAKE_circleci_1234567890abcdef
+
+# 18) Example of mobile/CI tokens
+FIREBASE_API_KEY=AIzaSyFakeFirebaseApiKeyForTesting123456
+SENTRY_DSN=https://examplePublicKey@o0.ingest.sentry.io/0
+
+# End of demo secrets
